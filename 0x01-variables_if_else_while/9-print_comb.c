@@ -19,7 +19,7 @@ int main(void)
 		if (num != 9)
 		{
 			putchar(44);
-			putchar('\t');
+			putchar(32);
 		}
 		num++;
 	}
