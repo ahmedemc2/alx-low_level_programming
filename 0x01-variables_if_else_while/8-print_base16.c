@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char hex = 49;
+	char hex = 48;
 
 	while (hex < 103)
 	{
