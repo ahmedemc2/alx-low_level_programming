@@ -8,7 +8,7 @@
  * Description: c program that assigne a random number to the variable n
  * and print whether the number stored is positive or negative
  *
- * Return : 0 (success)
+ * Return: 0 (success)
 */
 
 int main(void)
