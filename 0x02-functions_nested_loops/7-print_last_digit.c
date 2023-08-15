@@ -5,12 +5,18 @@
  *
  * Description: function that prints the last digit of a number
  *
- * @last_digit : checks input of function
+ * @n : checks input of function
  *
- * Return: the last digit of the number
+ * Return: the last_digit of the number
 */
 
-int print_last_digit(int last_digit)
+int print_last_digit(int n)
 {
-	return (last_digit % 10);
+	int last_digit;
+
+	if (n < 0)
+		last_digit = -1 * (n % 10);
+	else
+		last_digit = n % 10;
+	return (last_digit);
 }
