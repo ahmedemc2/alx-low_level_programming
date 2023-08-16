@@ -19,7 +19,9 @@ int main(void)
 	for (i = 0 ; i <= 50 ; i++)
 	{
 		fib = f1 + f2;
-		printf("%u, ", fib);
+		printf("%u", fib);
+		if (i != 50)
+			printf(", ");
 		f1 = f2;
 		f2 = fib;
 	}
