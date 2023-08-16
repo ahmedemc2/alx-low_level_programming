@@ -24,4 +24,5 @@ int main(void)
 		f2 = fib;
 	}
 	printf("\n");
+	return (0);
 }
