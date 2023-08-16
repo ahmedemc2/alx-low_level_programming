@@ -15,7 +15,7 @@ int main(void)
 	int i;
 	unsigned long f1 = 0, f2 = 1, fib;
 
-	for (i = 0 ; i <= 50 ; i++)
+	for (i = 0 ; i < 50 ; i++)
 	{
 		fib = f1 + f2;
 		printf("%lu", fib);
