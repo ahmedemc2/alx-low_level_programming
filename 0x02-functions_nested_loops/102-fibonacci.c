@@ -19,7 +19,7 @@ int main(void)
 	{
 		fib = f1 + f2;
 		printf("%lu", fib);
-		if (i != 50)
+		if (i != 49)
 			printf(", ");
 		f1 = f2;
 		f2 = fib;
