@@ -12,14 +12,13 @@
 
 int main(void)
 {
-	int i, fib;
-	int f1 = 0;
-	int f2 = 1;
+	int i;
+	unsigned long f1 = 0, f2 = 1, fib;
 
 	for (i = 0 ; i <= 50 ; i++)
 	{
 		fib = f1 + f2;
-		printf("%u", fib);
+		printf("%lu", fib);
 		if (i != 50)
 			printf(", ");
 		f1 = f2;
