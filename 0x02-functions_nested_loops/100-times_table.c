@@ -1,55 +1,45 @@
 #include "main.h"
 
 /**
- * print_times_table - entry point
+ *print_times_table - Entry point
  *
  * Description: function that prints the n times table, starting with 0
  *
- * @n : checks input of the function
+ * @n : checks the input of the function
  *
  * Return: nothing
 */
 
 void print_times_table(int n)
 {
-	int i, j, k, mult;
+	int i, j, mult;
 
-	if (n < 15 && n > 0)
+	if (n <= 15 && n >= 0)
 	{
-		for (i = 0 ; i < n ; i++)
+		for (i = 0 ; i <= n ; i++)
 		{
 			_putchar(48);
-			_putchar(',');
-			for (j = 0 ; j < n ; j++)
+			for (j = 1 ; j <= n ; j++)
 			{
-				mult = i * j;
-				if (n <= 9)
-				{
-					k = 0;
-					while (k < 3)
-					{
-						_putchar(' ');
-					}
-				_putchar(mult + '0');
 				_putchar(',');
-				}
-				else if ((mult / 10) < 10)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((mult / 10) + 48);
-					_putchar((mult % 10) + 48);
-					_putchar(',');
-				}
-				else
-				{
-					_putchar(' ');
-					_putchar((mult / 10) + 48);
-					_putchar((mult % 10) + 48);
-					_putchar(',');
-				}
+				_putchar(' ');
 
+				mult = i * j;
+
+				if (mult <= 9)
+					_putchar(' ');
+				if (mult <= 99)
+					_putchar(' ');
+				if (mult >= 100)
+				{
+					_putchar((mult / 100) + 48);
+					_putchar((mult / 10) % 10 + 48);
+				}
+				else if (mult <= 99 && mult >= 10)
+					_putchar ((mult / 10) + 48);
+				_putchar((mult % 10) + 48);
 			}
+			_putchar('\n');
 		}
 	}
 }
