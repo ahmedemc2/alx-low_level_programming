@@ -23,7 +23,6 @@ void print_square(int size)
 			if (j != (size - 1))
 			{
 				_putchar('\n');
-				_putchar('\n');
 			}
 		}
 	}
