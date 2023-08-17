@@ -3,5 +3,5 @@
 
 #include <stdio.h>
 int _putchar(char c);
-int _isupper(int c);
+sh: 1: q: not found
 #endif /* MAIN_H */
