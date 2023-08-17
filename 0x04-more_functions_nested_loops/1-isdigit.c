@@ -7,13 +7,13 @@
  *
  * @c : checks the input of the function
  *
- * return: 1 if 'c' is a digit
+ * Return: 1 if 'c' is a digit
  * 0 otherwise
 */
 
 int _isdigit(int c)
 {
-	if (c > 47 && c < 58)
+	if (c >= 48 && c <= 57)
 		return (1);
 	else
 		return (0);
