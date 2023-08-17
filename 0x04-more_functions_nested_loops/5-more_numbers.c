@@ -27,7 +27,7 @@ void print_most_numbers(void)
 					i = 47;
 			}
 		}
-	_putchar('\n');
 j = 0;
 	}
+	_putchar('\n');
 }
