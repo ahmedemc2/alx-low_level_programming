@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_most_numbers - entry point
+ * more_numbers - entry point
  *
  * Description: function that prints the numbers, from 0 to 9
  * except 2 and 4
@@ -9,7 +9,7 @@
  * Return : nothing
 */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int i, j = 0, k;
 
