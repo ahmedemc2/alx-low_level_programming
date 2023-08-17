@@ -19,7 +19,7 @@ void print_most_numbers(void)
 		{
 			if (j < 15)
 			{
-				if (j < 9)
+				if (j > 9)
 					_putchar(49);
 				_putchar(i);
 				j++;
