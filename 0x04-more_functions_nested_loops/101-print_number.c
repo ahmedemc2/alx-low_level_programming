@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * lenght - function give the number of digit in the function
  *
