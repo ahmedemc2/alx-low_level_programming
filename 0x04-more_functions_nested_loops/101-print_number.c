@@ -40,10 +40,10 @@ int lenght(int l)
 
 void print_number(int n)
 {
-	int i, a, b;
+	int i, a, b = 1;
 
 	a = lenght(n);
-	for (b = 1 ; b < a ; b++)
+	for (i = 1 ; i < a ; i++)
 		b *= 10;
 	if (n < 0)
 	{
@@ -52,7 +52,7 @@ void print_number(int n)
 	}
 	for (i = a ; i > 0 ; i--)
 	{
-		_putchar((n / 10) % 10 + '0');
+		_putchar((n / (b * 10)) % 10 + '0');
 			b /= 10;
 	}
 	_putchar(n % 10 + '0');
