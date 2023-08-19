@@ -51,14 +51,10 @@ void largest_prime_factor(long int num)
 		largest = num;
 	printf("%d\n", largest);
 }
-
 /**
  * main - Entry point
  *
- * Description: program that finds and prints the largest prime factor
- * of the number 612852475143
- *
- * return: (0) Always
+ * Return: Always 0 (Success)
 */
 
 int main(void)
