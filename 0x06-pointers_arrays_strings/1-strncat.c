@@ -13,10 +13,14 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j, k, dim;
+	int i, j, k, dim, l;
 
 	for (i = 0 ; dest[i] != '\0' ; i++)
 		;
+	for (l = 0 ; src[l] != '\0' ; l++)
+		;
+	if (l <= n)
+		n = l;
 
 	dim = i + n - 1;
 	j = 0;
