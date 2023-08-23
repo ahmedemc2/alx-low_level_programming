@@ -12,7 +12,7 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j, k;
+	int i, j, k, m;
 
 	for (j = 0 ; src[j] != '\0' ; j++)
 		;
@@ -23,8 +23,9 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0 ; i < n ; i++)
 		dest[i] = src[i];
-	if (n >= j)
-		dest[i] = '\0';
+
+	for (m = i ; m < k - 7 ; m++)
+		dest[m] = '\0';
 
 	return (dest);
 }
