@@ -10,6 +10,7 @@
 
 char *leet(char *str)
 {
+	char *c = str;
 	char alphabet[] = "OLEAToleat";
 	char numbers[] = {'0', '1', '3', '4', '7', '0', '1', '3', '4', '7'};
 	int i;
@@ -23,5 +24,5 @@ char *leet(char *str)
 		}
 		str++;
 	}
-	return (str);
+	return (c);
 }
