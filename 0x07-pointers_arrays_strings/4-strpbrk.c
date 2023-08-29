@@ -12,7 +12,7 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0, j, pos;
+	int i = 0, j, pos, match = 0;
 
 	for (pos = 0; s[pos] >= '\0'; pos++)
 		;
@@ -22,11 +22,15 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (accept[i] == s[j])
 			{
+				match = 1;
 				if (j < pos)
 				pos = j;
 			}
 		}
 		i++;
 	}
-	return (s + pos);
+	if (match == 1)
+		return (s + pos);
+	else
+		return(NULL)
 }
