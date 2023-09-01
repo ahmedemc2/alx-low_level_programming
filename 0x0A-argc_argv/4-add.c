@@ -23,16 +23,15 @@ if (argc > 2)
 		}
 		else
 		{
-			printf("Error\n");
-			return (1);
+			return (printf("Error\n"), 1);
 		}
 	}
 	printf("%d\n", sum);
 }
 else if (argc == 2)
 {
-	printf("Error\n");
-	return (1);
+	return (printf("Error\n"), 1);
+
 }
 else if (argc == 1)
 {
