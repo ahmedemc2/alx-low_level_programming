@@ -35,7 +35,7 @@ else if (argc == 2)
 }
 else if (argc == 1)
 {
-	return (0);
+	printf("%d\n", argc - 1);
 }
 return (0);
 }
