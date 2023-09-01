@@ -31,8 +31,7 @@ if (argc > 2)
 }
 else
 {
-	printf("Error\n");
-	return (1);
+	printf("%d\n", argc - 1);
 }
 return (0);
 }
