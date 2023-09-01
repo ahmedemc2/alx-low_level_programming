@@ -17,15 +17,17 @@ if (argc > 2)
 {
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] <= 47 && *argv[i] >= 58)
+		if (*argv[i] > 47 && *argv[i] < 58)
+		{
+			sum += atoi(argv[i]);
+		}
+		else
 		{
 			printf("Error\n");
 			return (1);
 		}
-		else
-			sum += atoi(argv[i]);
 	}
-	printf ("%d\n", sum);
+	printf("%d\n", sum);
 }
 else
 {
