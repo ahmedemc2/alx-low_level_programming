@@ -32,7 +32,7 @@ int counter(char *str)
 char **strtow(char *str)
 {
 	char **ptr;
-	int n = 0, i = 0, wc = 0, l = 0;
+	int n = 0, i = 0, wc = 0, l = 0, j = 0, k = 0;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
