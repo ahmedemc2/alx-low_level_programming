@@ -13,9 +13,17 @@ int counter(char *str)
 {
 	int i, nb = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
-		if (str[i] != ' ')
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] == ' ')
+		{
+			if (s[i + 1] != ' ' && s[i + 1] != '\0')
+				nb++;
+
+		}
+		else if (i == 0)
 			nb++;
+	}
 	nb++;
 	return (nb);
 }
@@ -50,7 +58,9 @@ char **strtow(char *str)
 		{
 			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 				;
+			j++;
 			ptr[wc] = (char *)malloc(j * sizeof(char));
+			j--;
 			if (ptr[wc] == NULL)
 			{
 				for (k = 0; k < wc; k++)
