@@ -17,7 +17,7 @@ int counter(char *str)
 	{
 		if (str[i] == ' ')
 		{
-			if (s[i + 1] != ' ' && s[i + 1] != '\0')
+			if (str[i + 1] != ' ' && str[i + 1] != '\0')
 				nb++;
 
 		}
