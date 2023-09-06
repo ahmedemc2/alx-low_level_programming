@@ -16,6 +16,7 @@ int counter(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		if (str[i] != ' ')
 			nb++;
+	nb++;
 	return (nb);
 }
 
@@ -49,9 +50,7 @@ char **strtow(char *str)
 		{
 			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 				;
-			j++;
 			ptr[wc] = (char *)malloc(j * sizeof(char));
-			j--;
 			if (ptr[wc] == NULL)
 			{
 				for (k = 0; k < wc; k++)
