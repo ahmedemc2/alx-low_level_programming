@@ -34,6 +34,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *concat;
 	unsigned int x, i, j, l;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	if (n >= _strlen(s2))
 		n = _strlen(s2) - 1;
 	x = _strlen(s1) + n;
@@ -45,17 +50,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-		for (i = 0; i < x - n; i++)
-		{
-			*(concat + i) = *(s1 + i);
-		}
-		l = 0;
-		for (j = i; j <= x; j++)
-		{
-			*(concat + j) = *(s2 + l);
-			l++;
-		}
-		*(concat + j) = '\0';
-		return (concat);
+	for (i = 0; i < x - n; i++)
+	{
+		*(concat + i) = *(s1 + i);
+	}
+	l = 0;
+	for (j = i; j <= x; j++)
+	{
+		*(concat + j) = *(s2 + l);
+		l++;
+	}
+	*(concat + j) = '\0';
+	return (concat);
 
 }
