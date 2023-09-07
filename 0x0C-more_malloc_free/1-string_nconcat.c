@@ -9,7 +9,7 @@
  * Return: number of bytes
 */
 
-int _strlen(char *string)
+unsigned int _strlen(char *string)
 {
 	int num;
 
@@ -32,7 +32,7 @@ int _strlen(char *string)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int x;
+	unsigned int x, i, j, l;
 
 	if (n >= _strlen(s2))
 		n = _strlen(s2) - 1;
@@ -41,16 +41,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	concat = malloc(sizeof(concat) * x);
 
 	if (concat == NULL)
+	{
 		return (NULL);
+	}
 
 		for (i = 0; i < x - n; i++)
 		{
 			*(concat + i) = *(s1 + i);
 		}
 		l = 0;
-		for (j = i; j <= x; j++; l++)
+		for (j = i; j <= x; j++)
 		{
 			*(concat + j) = *(s2 + l);
+			l++;
 		}
 		*(concat + j) = '\0';
 		return (concat);
