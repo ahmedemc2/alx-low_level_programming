@@ -32,11 +32,11 @@ unsigned int _strlen(char *string)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int x, i, j, l;
+	unsigned int x, i, j;
 
 	if (n >= _strlen(s2))
-		n = _strlen(s2) - 1;
-	x = _strlen(s1) + n;
+		n = _strlen(s2);
+	x = _strlen(s1) + n + 1;
 
 	concat = malloc(sizeof(concat) * x);
 
@@ -49,13 +49,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		*(concat + i) = *(s1 + i);
 	}
-	l = 0;
-	for (j = i; j <= x; j++)
+	for (j = 0; j < n; j++)
 	{
-		*(concat + j) = *(s2 + l);
-		l++;
+		*(concat + i) = *(s2 + j);
+		i++;
 	}
-	*(concat + j) = '\0';
+	*(concat + i) = '\0';
 	return (concat);
 
 }
