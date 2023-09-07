@@ -32,7 +32,7 @@ unsigned int _strlen(char *string)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int x, i, j;
+	unsigned int i, j;
 
 	if (s1 == NULL)
 		s1 = "";
