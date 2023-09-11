@@ -38,6 +38,7 @@ char *_strcopy(char *copy, char *origin)
 		copy[i] = origin[i];
 		i++;
 	}
+	copy[i] = '\0';
 	return (copy);
 }
 /**
