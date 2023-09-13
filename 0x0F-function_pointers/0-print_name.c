@@ -5,6 +5,7 @@
  * a function to a pointer
  *
  * @name : the name to print
+ * @f : function to pointer
  *
  * Return: nothing
 */
