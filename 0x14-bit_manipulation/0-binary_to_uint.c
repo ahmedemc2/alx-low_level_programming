@@ -3,9 +3,9 @@
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
  *
- * b: the binary number in char
+ * @b: the binary number in char
  *
- * Return : the number
+ * Return: the number
 */
 
 unsigned int binary_to_uint(const char *b)
