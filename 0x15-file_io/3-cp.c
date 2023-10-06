@@ -19,7 +19,7 @@ int main(int ac, char **av)
 {
 	int from_fd = 0, to_fd = 0;
 	ssize_t b;
-	char buf[RAED_BUF_SIZE];
+	char buf[READ_BUF_SIZE];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, USAGE), exit(97);
